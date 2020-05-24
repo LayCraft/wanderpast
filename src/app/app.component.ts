@@ -9,7 +9,6 @@ import { IosPopupComponent } from './ios-popup/ios-popup.component';
 })
 export class AppComponent {
   title = 'Wanderpast';
-  showInstallMessage = false;
 
   constructor(
     private snackBarService: MatSnackBar
