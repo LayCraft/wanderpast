@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { IosPopupComponent } from './ios-popup/ios-popup.component';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +11,9 @@ export class AppComponent {
   title = 'Wanderpast';
   showInstallMessage = false;
 
-  constructor() {
+  constructor(
+    private snackBarService: MatSnackBar
+  ) {
     this.iosCheck();
   }
 
@@ -32,6 +36,14 @@ export class AppComponent {
     const isStandaloneWindowMatchMedia = window.matchMedia('(display-mode: standalone)').matches;
 
     // Checks if should display install popup notification:
-    this.showInstallMessage = isIos() && !(isStandaloneWindowNavigator && isStandaloneWindowMatchMedia);
+    const showInstallMessage = isIos() && !(isStandaloneWindowNavigator && isStandaloneWindowMatchMedia);
+
+    // if the user is on an iOs device we show them an install message for 10 seconds
+    // if (showInstallMessage) {
+    this.snackBarService.openFromComponent(IosPopupComponent, {
+      // display for 10 seconds
+      duration: 10 * 1000,
+    });
+    // }
   }
 }
