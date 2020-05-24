@@ -1,3 +1,5 @@
+This PWA is hosted in Github Pages and built by Github Actions. Hosted here: [laycraft.github.io/wanderpast](https://laycraft.github.io/wanderpast/)
+
 # Wanderpast
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
