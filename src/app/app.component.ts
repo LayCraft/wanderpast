@@ -6,8 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Wanderpast';
-  demoAlert() {
-    alert('You clicked a button. Do you want a medal or something?');
-  }
+  title = 'wanderpast';
 }
