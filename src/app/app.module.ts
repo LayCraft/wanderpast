@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { MatButtonModule } from '@angular/material/button';
     // Material stuff
     MatCardModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
 
   ],
   providers: [],

@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Wanderpast';
+  demoAlert() {
+    alert('You clicked a button. Do you want a medal or something?');
+  }
 }
