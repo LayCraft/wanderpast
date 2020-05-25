@@ -1,4 +1,4 @@
-This PWA is hosted in Github Pages and built by Github Actions. Hosted here: [laycraft.github.io/wanderpast](https://laycraft.github.io/wanderpast/)
+This PWA is hosted in Github Pages and built by Github Actions. Hosted at [laycraft.github.io/wanderpast](https://laycraft.github.io/wanderpast/)
 
 # Wanderpast
 
