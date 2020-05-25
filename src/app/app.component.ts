@@ -38,11 +38,11 @@ export class AppComponent {
     const showInstallMessage = isIos() && !(isStandaloneWindowNavigator && isStandaloneWindowMatchMedia);
 
     // if the user is on an iOs device we show them an install message for 10 seconds
-    // if (showInstallMessage) {
-    this.snackBarService.openFromComponent(IosPopupComponent, {
-      // display for 10 seconds
-      duration: 10 * 1000,
-    });
-    // }
+    if (showInstallMessage) {
+      this.snackBarService.openFromComponent(IosPopupComponent, {
+        // display for 10 seconds
+        duration: 10 * 1000,
+      });
+    }
   }
 }
